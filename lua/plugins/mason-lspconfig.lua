@@ -6,6 +6,7 @@ return {
       require("mason").setup({
         ensure_installed = {
           "stylelint",
+          "phpcs",
         }
       })
     end,
