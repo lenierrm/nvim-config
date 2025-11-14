@@ -5,7 +5,9 @@ return {
 		null_ls.setup({
 			sources = {
 				null_ls.builtins.formatting.stylua,
-				null_ls.builtins.formatting.prettier,
+				null_ls.builtins.formatting.prettier.with({
+					filetypes = { "javascript", "typescript", "css", "html", "json", "yaml", "markdown" },
+				}),
 				null_ls.builtins.diagnostics.stylelint,
 				null_ls.builtins.diagnostics.phpcs.with({
 					command = "/home/lenier/.config/composer/vendor/bin/phpcs",
@@ -14,6 +16,7 @@ return {
 				null_ls.builtins.formatting.phpcbf.with({
 					command = "/home/lenier/.config/composer/vendor/bin/phpcbf",
 					extra_args = { "--standard=WordPress" },
+					filetypes = { "php" },
 				}),
 			},
 		})
