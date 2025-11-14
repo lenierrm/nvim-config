@@ -11,7 +11,10 @@ return {
 					command = "/home/lenier/.config/composer/vendor/bin/phpcs",
 					extra_args = { "--standard=WordPress" },
 				}),
-				null_ls.builtins.formatting.phpcbf,
+				null_ls.builtins.formatting.phpcbf.with({
+					command = "/home/lenier/.config/composer/vendor/bin/phpcbf",
+					extra_args = { "--standard=WordPress" },
+				}),
 			},
 		})
 		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
