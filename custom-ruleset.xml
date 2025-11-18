@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="CustomWordPress">
+    <description>Custom WordPress standard that disables the blank line after the opening PHP tag.</description>
+    <rule ref="WordPress">
+        <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.StartFile"/>
+    </rule>
+</ruleset>
