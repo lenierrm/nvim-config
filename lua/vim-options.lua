@@ -5,6 +5,7 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set clipboard=unnamedplus")
+vim.cmd("set cursorline")
 vim.g.mapleader = " "
 
 -- Navigate vim panes better
