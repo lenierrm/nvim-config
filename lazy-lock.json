@@ -7,6 +7,7 @@
   "copilot.vim": { "branch": "release", "commit": "da369d90cfd6c396b1d0ec259836a1c7222fb2ea" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
   "fzf-lua": { "branch": "main", "commit": "be1c28b4a32beec16e29ac9c3edb7c6f760747ae" },
+  "git-blame.nvim": { "branch": "main", "commit": "5c536e2d4134d064aa3f41575280bc8a2a0e03d7" },
   "jsfunc.nvim": { "branch": "master", "commit": "ed968840ade89f1d0c95513852a145dca1fe7916" },
   "just.nvim": { "branch": "master", "commit": "4e2c39b6987fa58b2d7068c6bb71d2bd61a979c2" },
   "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
