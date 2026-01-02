@@ -1,3 +1,36 @@
 {
-  "extends": "@wordpress/stylelint-config"
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "@wordpress/stylelint-config",
+    "stylelint-config-clean-order"
+  ],
+  "customSyntax": "postcss-scss",
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "use",
+          "forward",
+          "mixin",
+          "include",
+          "if",
+          "else",
+          "for",
+          "each",
+          "while"
+        ]
+      }
+    ],
+    "declaration-no-important": true,
+    "custom-property-pattern": "^_?[a-z]+((-){0,2}[a-z0-9])*$",
+    "selector-class-pattern": [
+      "^[a-z]+(-[a-z]+)*(__[a-z]+(-[a-z]+)*)?(--[a-z]+(-[a-z]+)*)?$",
+      {}
+    ],
+    "max-nesting-depth": 4,
+    "function-url-quotes": "always"
+  }
 }
