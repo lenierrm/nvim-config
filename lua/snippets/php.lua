@@ -78,9 +78,10 @@ return {
 				i(5, "option 1 description"),
 				i(6, "option-2"),
 				i(7, "option 2 description"),
-			},{
-        repeat_duplicates = true
-      }
+			},
+			{
+				repeat_duplicates = true,
+			}
 		)
 	),
 
@@ -99,9 +100,10 @@ return {
 				a = i(1, "field_name"),
 				i(2, "field label"),
 				i(3, "text_domain"),
-			},{
-        repeat_duplicates = true
-      }
+			},
+			{
+				repeat_duplicates = true,
+			}
 		)
 	),
 
@@ -122,9 +124,10 @@ return {
 				i(2, "field label"),
 				i(3, "text_domain"),
 				i(4, "ffffff"),
-			},{
-        repeat_duplicates = true
-      }
+			},
+			{
+				repeat_duplicates = true,
+			}
 		)
 	),
 
@@ -146,9 +149,10 @@ return {
 				i(2, "field label"),
 				i(3, "text_domain"),
 				i(4, "1"),
-			},{
-        repeat_duplicates = true
-      }
+			},
+			{
+				repeat_duplicates = true,
+			}
 		)
 	),
 
@@ -168,9 +172,10 @@ return {
 				a = i(1, "field_name"),
 				i(2, "field label"),
 				i(3, "text_domain"),
-			},{
-        repeat_duplicates = true
-      }
+			},
+			{
+				repeat_duplicates = true,
+			}
 		)
 	),
 
@@ -196,9 +201,10 @@ return {
 				b = i(3, "text_domain"),
 				i(4, "1"),
 				i(5, "Field intructions"),
-			},{
-        repeat_duplicates = true
-      }
+			},
+			{
+				repeat_duplicates = true,
+			}
 		)
 	),
 
@@ -219,9 +225,35 @@ return {
 				a = i(1, "field_name"),
 				i(2, "field label"),
 				i(3, "text_domain"),
-			},{
-        repeat_duplicates = true
-      }
+			},
+			{
+				repeat_duplicates = true,
+			}
+		)
+	),
+
+	s(
+		"acf_number",
+		fmt(
+			[[
+        ${a} = array(
+          'key'           => 'field_' . FIELD_BLOCK_NAME . '_{a}',
+          'name'          => '{a}',
+          'label'         => __( '{}', '{}' ),
+          'type'          => 'number',
+          'default_value' => 5,
+          'min'           => 1,
+          'step'          => 1,
+        );
+      ]],
+			{
+				a = i(1, "field_name"),
+				i(2, "field label"),
+				i(3, "text_domain"),
+			},
+			{
+				repeat_duplicates = true,
+			}
 		)
 	),
 
