@@ -19,6 +19,7 @@ local mason_servers = {
   "cssls",
   "html",
   "emmet_ls",
+  "phpactor",
   -- Agrega otros servidores que instales via Mason
 }
 
@@ -26,5 +27,3 @@ for _, server in ipairs(mason_servers) do
   vim.lsp.enable(server)
 end
 
--- Configuración para servidores que NO están en Mason (como phpactor)
-vim.lsp.enable('phpactor')

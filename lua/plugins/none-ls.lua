@@ -11,12 +11,14 @@ return {
 				null_ls.builtins.diagnostics.stylelint,
 				null_ls.builtins.diagnostics.phpcs.with({
 					command = "/home/lenier/.config/composer/vendor/bin/phpcs",
-					extra_args = { "--standard=/home/lenier/.config/nvim/custom-ruleset.xml" },
+					extra_args = { "--standard=WordPress" },
+					--extra_args = { "--standard=/home/lenier/.config/nvim/custom-ruleset.xml" },
 				}),
 				null_ls.builtins.formatting.phpcbf.with({
 					command = "/home/lenier/.config/composer/vendor/bin/phpcbf",
-					extra_args = { "--standard=/home/lenier/.config/nvim/custom-ruleset.xml" },
-					filetypes = { "php" },
+					extra_args = { "--standard=WordPress" },
+					--extra_args = { "--standard=/home/lenier/.config/nvim/custom-ruleset.xml" },
+					--filetypes = { "php" },
 				}),
 			},
 		})
