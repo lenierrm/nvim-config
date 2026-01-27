@@ -18,6 +18,58 @@ return {
 	),
 
 	s(
+		"acf_accordion",
+		fmt(
+			[[
+        ${a} = array(
+          'key'          => 'field_' . FIELD_BLOCK_NAME . '_{a}',
+          'name'         => '{a}',
+          'label'        => __( '{}', '{}' ),
+          'type'         => 'accordion',
+          'open'         => 1,
+          'multi_expand' => 0,
+          'endpoint'     => 0,
+        );
+      ]],
+			{
+				a = i(1, "field_name"),
+				i(2, "field label"),
+				i(3, "text_domain"),
+			},
+			{
+				repeat_duplicates = true,
+			}
+		)
+	),
+
+	s(
+		"acf_repeater",
+		fmt(
+			[[
+        ${a} = array(
+          'key'        => 'field_' . FIELD_BLOCK_NAME . '_{a}',
+          'name'       => '{a}',
+          'label'      => __( '{}', '{}' ),
+          'type'       => 'repeater',
+          'layout'     => 'block',
+          'sub_fields' => array(
+            {}
+          ),
+        );
+      ]],
+			{
+				a = i(1, "field_name"),
+				i(2, "field label"),
+				i(3, "text_domain"),
+				i(4, "sub_fields"),
+			},
+			{
+				repeat_duplicates = true,
+			}
+		)
+	),
+
+	s(
 		"acf_wrapper",
 		fmt(
 			[[
@@ -94,6 +146,30 @@ return {
           'name'              => '{a}',
           'label'             => __( '{}', '{}' ),
           'type'              => 'text',
+        );
+      ]],
+			{
+				a = i(1, "field_name"),
+				i(2, "field label"),
+				i(3, "text_domain"),
+			},
+			{
+				repeat_duplicates = true,
+			}
+		)
+	),
+
+	s(
+		"acf_wysiwyg",
+		fmt(
+			[[
+        ${a} = array(
+          'key'          => 'field_' . FIELD_BLOCK_NAME . '_{a}',
+          'name'         => '{a}',
+          'label'        => __( '{}', '{}' ),
+          'type'         => 'wysiwyg',
+          'toolbar'      => 'basic',
+          'media_upload' => 0,
         );
       ]],
 			{
