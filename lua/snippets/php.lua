@@ -18,6 +18,29 @@ return {
 	),
 
 	s(
+		"acf_tab",
+		fmt(
+			[[
+        ${a} = array(
+          'key'       => 'field_' . FIELD_BLOCK_NAME . '_{a}',
+          'label'     => __( '{}', '{}' ),
+          'name'      => '{a}',
+          'type'      => 'tab',
+          'placement' => 'top',
+        );
+      ]],
+			{
+				a = i(1, "field_name"),
+				i(2, "field label"),
+				i(3, "text_domain"),
+			},
+			{
+				repeat_duplicates = true,
+			}
+		)
+	),
+
+	s(
 		"acf_accordion",
 		fmt(
 			[[
