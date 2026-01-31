@@ -17,6 +17,15 @@ return {
 				},
 				never_show = {},
 			},
+			commands = {
+				delete = function(state)
+					local path = state.tree:get_node().path
+					local escaped_path = vim.fn.shellescape(path)
+					--Use the trash-cli utility command
+					vim.cmd("silent !trash-put " .. escaped_path)
+					require("neo-tree.sources.manager").refresh(state.name)
+				end,
+			},
 		},
 	},
 	branch = "v3.x",
