@@ -12,7 +12,25 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
-require("lazy").setup("plugins")
+require("lazy").setup({
+	spec = "plugins",
+	git = {
+		timeout = 600, -- 10 min (max)
+		cooldown = 10, -- wait 10s between operations
+		filter = true, -- Parcial clone (faster)
+		retry = 3, -- Retray 3 times if fails
+	},
+	concurrency = 1, -- Only 1 operation at time
+	install = {
+		missing = true,
+		retry = 3,
+	},
+	performance = {
+		cache = {
+			enabled = true, -- Dependencies caching
+		},
+	},
+})
 
 -- Cargar configuración LSP
 require("lsp.init")
