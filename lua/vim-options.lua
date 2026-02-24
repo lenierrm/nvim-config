@@ -6,6 +6,8 @@ vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set clipboard=unnamedplus")
 vim.cmd("set cursorline")
+vim.cmd("set conceallevel=2")
+vim.cmd("set concealcursor=nc")
 vim.g.mapleader = " "
 
 -- Navigate vim panes better
