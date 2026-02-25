@@ -37,6 +37,7 @@ return {
 	dependencies = {
 		-- Required.
 		"nvim-lua/plenary.nvim",
+		"OXY2DEV/markview.nvim",
 
 		-- see below for full list of optional dependencies 👇
 	},
