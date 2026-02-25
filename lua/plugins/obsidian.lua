@@ -5,13 +5,13 @@ return {
 	ft = "markdown",
 
 	vim.keymap.set("n", "<leader>on", ":ObsidianNew<CR>", { desc = "Obsidian new" }),
-	vim.keymap.set("n", "<leader>oen", ":ObsidianExtractNote<CR>", { desc = "Obsidian Extract Note" }),
-	vim.keymap.set("v", "<leader>ols", ":ObsidianLinks<CR>", { desc = "Obsidian Links" }),
+	vim.keymap.set("v", "<leader>oen", ":ObsidianExtractNote<CR>", { desc = "Obsidian Extract Note" }),
+	vim.keymap.set("n", "<leader>ols", ":ObsidianLinks<CR>", { desc = "Obsidian Links" }),
 	vim.keymap.set("n", "<leader>opi", ":ObsidianPasteImg<CR>", { desc = "Obsidian Paste Img" }),
 	vim.keymap.set("n", "<leader>otc", ":ObsidianTOC<CR>", { desc = "Obsidian TOC" }),
 	vim.keymap.set("n", "<leader>ocb", ":ObsidianToggleCheckbox<CR>", { desc = "Obsidian Toggle Checkbox" }),
 	vim.keymap.set("n", "<leader>oc", ":ObsidianCheck<CR>", { desc = "Obsidian Check" }),
-	vim.keymap.set("v", "<leader>ofl", ":ObsidianFollowLink<CR>", { desc = "Obsidian Follow Link" }),
+	vim.keymap.set("n", "<leader>ofl", ":ObsidianFollowLink<CR>", { desc = "Obsidian Follow Link" }),
 	vim.keymap.set("n", "<leader>oqs", ":ObsidianQuickSwitch<CR>", { desc = "Obsidian Quick Switch" }),
 	vim.keymap.set("n", "<leader>otg", ":ObsidianTags<CR>", { desc = "Obsidian Tags" }),
 	vim.keymap.set("n", "<leader>otw", ":ObsidianTomorrow<CR>", { desc = "Obsidian Tomorrow" }),
@@ -44,12 +44,12 @@ return {
 		workspaces = {
 			{
 				name = "personal",
-				path = "~/Documents/Obsidian Vault",
+				path = "~/Documents/Obsidian Vaults/Personal",
 			},
-			--{
-			--	name = "work",
-			--	path = "~/vaults/work",
-			--},
+			{
+				name = "work",
+				path = "~/Documents/Obsidian Vaults/Work",
+			},
 		},
 
 		-- see below for full list of options 👇
