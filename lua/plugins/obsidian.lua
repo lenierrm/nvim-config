@@ -4,6 +4,7 @@ return {
 	lazy = true,
 	ft = "markdown",
 
+	vim.keymap.set("n", "<leader>olb", ":ObsidianBacklinks<CR>", { desc = "Obsidian Backlinks" }),
 	vim.keymap.set("n", "<leader>on", ":ObsidianNew<CR>", { desc = "Obsidian new" }),
 	vim.keymap.set("v", "<leader>oen", ":ObsidianExtractNote<CR>", { desc = "Obsidian Extract Note" }),
 	vim.keymap.set("n", "<leader>ols", ":ObsidianLinks<CR>", { desc = "Obsidian Links" }),
@@ -42,6 +43,7 @@ return {
 		-- see below for full list of optional dependencies 👇
 	},
 	opts = {
+		legacy_commands = false,
 		workspaces = {
 			{
 				name = "personal",
